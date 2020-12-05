@@ -4,12 +4,14 @@ from typing import List
 
 import adventinput
 
+
 def ntuple_add(numlist: List[int], tuple_size: int) -> dict:
     """
     This probably isn't the best way to do this
     """
     for n_tuple in combinations(numlist, tuple_size):
         yield {"sum": sum(n_tuple), "tuple": n_tuple}
+
 
 def get_results(numlist: List[int], tuple_size: int):
     for results in ntuple_add(numlist, tuple_size):
